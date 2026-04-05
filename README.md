@@ -3,7 +3,7 @@
 A decentralized healthcare platform designed to ensure **secure, transparent, and tamper-proof management of organ donation and medical data** using blockchain, IPFS, and cloud technologies.
 
 
-🚀 Project Description
+ Project Description
 
 OrganChain addresses critical challenges in traditional healthcare systems such as:
 
@@ -14,9 +14,9 @@ OrganChain addresses critical challenges in traditional healthcare systems such 
 By integrating "Web3 technologies", the system ensures trust, traceability, and decentralization.
 
 
-🏗️ Architecture Overview
+ >> Architecture Overview
 
-🔁 End-to-End Flow
+ -> End-to-End Flow
 
 ```
 User → Frontend (React - Vercel)
@@ -26,7 +26,7 @@ User → Frontend (React - Vercel)
 
 File Upload → Backend → Pinata → IPFS → CID stored on Blockchain
 ```
-📁 Project Structure
+## Project Structure
 
 ```
 organchain/
@@ -38,9 +38,9 @@ organchain/
 ├── config/             # Environment configurations
 └── README.md
 ```
-⚙️ Tech Stack (With Purpose)
+>> Tech Stack (With Purpose)
 
- 🟢 Frontend
+ ## Frontend
 
 * React.js
 * Vercel (Deployment)
@@ -51,7 +51,7 @@ Why? >>
 * Seamless Web3 integration
 * Serverless and scalable hosting
 
-🔵 Backend
+>> Backend
 
 * Spring Boot
 * Maven
@@ -68,7 +68,7 @@ Why? >>
 * Build automation
 
 
-🟣 Blockchain
+>> Blockchain
 
 * Ethereum Smart Contracts
 * Alchemy API
@@ -81,7 +81,7 @@ Why? >>
 
 ---
 
-### 🟡 Storage
+>> Storage
 
 * IPFS
 * Pinata
@@ -94,7 +94,7 @@ Why? >>
 
 ---
 
-### 🟠 Development Tools
+>> Development Tools
 
 * Ganache (Local blockchain)
 * ngrok (Public tunnel)
@@ -106,38 +106,38 @@ Why? >>
 
 ---
 
-## 🔄 Detailed Workflow
+## Detailed Workflow
 
-### 1️⃣ User Interaction
+### User Interaction
 
 * User accesses the web app
 * Inputs data or uploads medical records
 
-### 2️⃣ Backend Processing
+###  Backend Processing
 
 * Validates user data
 * Prepares blockchain transactions
 
-### 3️⃣ File Upload (IPFS)
+### File Upload (IPFS)
 
 * File sent to Pinata
 * IPFS returns a unique **CID (Content Identifier)**
 
-### 4️⃣ Blockchain Storage
+### Blockchain Storage
 
 * Smart contract stores:
 
   * Metadata
   * IPFS CID
 
-### 5️⃣ Data Retrieval
+### Data Retrieval
 
 * Fetch CID from blockchain
 * Retrieve file from IPFS securely
 
 ---
 
-## 🔐 Key Features
+## Key Features
 
 * Tamper-proof records using blockchain
 * Decentralized storage via IPFS
@@ -147,7 +147,7 @@ Why? >>
 
 ---
 
- 🧪 Setup Instructions
+ >> Setup Instructions
 
 🔹 Prerequisites
 
@@ -192,8 +192,7 @@ cd contracts
 
 ---
 
-
-🌍 Deployment
+>> Deployment
 
 | Component  | Platform             |
 | ---------- | -------------------- |
@@ -202,7 +201,7 @@ cd contracts
 | Blockchain | Ethereum via Alchemy |
 | Storage    | IPFS via Pinata      |
 
-⚖️ Comparison with Traditional Systems
+>> Comparison with Traditional Systems
 
 | Feature      | Traditional System | OrganChain        |
 | ------------ | ------------------ | ----------------- |
@@ -211,20 +210,20 @@ cd contracts
 | Transparency | Limited            | Full              |
 | Security     | Moderate           | High              |
 
-⚠️ Limitations
+>> Limitations
 
 * Gas fees for blockchain transactions
 * Slower write operations
 * Requires Web3 knowledge
 
-🚀 Future Scope
+>> Future Scope
 
 * AI-based organ matching system
 * Real-time dashboards
 * Integration with hospital APIs
 * Multi-chain compatibility
 
-🤝 Contributing
+>> Contributing
 
 1. Fork the repository
 2. Create a new branch
