@@ -12,7 +12,7 @@ public class LoginRequestDTO {
 
     @NotBlank(message = "Role is required")
     private String role;
-
+    private String otp;
     public LoginRequestDTO() {}
 
     public String getAbhaId() { return abhaId; }
@@ -23,4 +23,6 @@ public class LoginRequestDTO {
 
     public String getRole() { return role; }
     public void setRole(String role) { this.role = role; }
+    public String getOtp() { return otp; }
+    public void setOtp(String otp) {this.otp = otp; }
 }
