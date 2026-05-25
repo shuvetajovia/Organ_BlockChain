@@ -245,8 +245,8 @@
                 indicators[currentSlide].classList.remove('bg-white/30');
             }
         }
-
-        setInterval(nextSlide, 2000);  
+        // Fix: Changed carousel interval from 2000ms to 5000ms — 2 seconds was too fast to read slide content
+        setInterval(nextSlide, 5000);  
 
         // Accordion Logic
         function toggleAccordion(button) {
