@@ -2,7 +2,11 @@ package com.transplantchain.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.*;
 
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class SecurityLog {
     @Id
@@ -11,20 +15,8 @@ public class SecurityLog {
     private String sourceIp;
     private String riskLevel;
     private String timestamp;
+    @Setter
     private String status; // ACTIVE, BANNED, DISMISSED
     private String reason;
 
-    public SecurityLog() {}
-    public SecurityLog(String eventId, String type, String sourceIp, String riskLevel, String timestamp, String status, String reason) {
-        this.eventId = eventId; this.type = type; this.sourceIp = sourceIp; this.riskLevel = riskLevel; this.timestamp = timestamp; this.status = status; this.reason = reason;
-    }
-
-    public String getEventId() { return eventId; }
-    public String getType() { return type; }
-    public String getSourceIp() { return sourceIp; }
-    public String getRiskLevel() { return riskLevel; }
-    public String getTimestamp() { return timestamp; }
-    public String getStatus() { return status; }
-    public void setStatus(String status) { this.status = status; }
-    public String getReason() { return reason; }
 }
