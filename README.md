@@ -1,9 +1,8 @@
-🧬 OrganChain
+# OrganChain
 
 A decentralized healthcare platform designed to ensure **secure, transparent, and tamper-proof management of organ donation and medical data** using blockchain, IPFS, and cloud technologies.
 
-
- Project Description
+## Project Description
 
 OrganChain addresses critical challenges in traditional healthcare systems such as:
 
@@ -11,14 +10,13 @@ OrganChain addresses critical challenges in traditional healthcare systems such 
 * Lack of transparency in organ allocation
 * Centralized control of sensitive records
 
-By integrating "Web3 technologies", the system ensures trust, traceability, and decentralization.
+By integrating Web3 technologies, the system ensures trust, traceability, and decentralization.
 
+## Architecture Overview
 
- >> Architecture Overview
+### End-to-End Flow
 
- -> End-to-End Flow
-
-```
+```bash
 User → Frontend (React - Vercel)
      → Backend (Spring Boot REST APIs)
      → Blockchain (Ethereum via Alchemy)
@@ -26,9 +24,10 @@ User → Frontend (React - Vercel)
 
 File Upload → Backend → Pinata → IPFS → CID stored on Blockchain
 ```
+
 ## Project Structure
 
-```
+```bash
 organchain/
 │
 ├── frontend/           # React frontend
@@ -38,73 +37,67 @@ organchain/
 ├── config/             # Environment configurations
 └── README.md
 ```
->> Tech Stack (With Purpose)
 
- ## Frontend
+## Tech Stack
+
+### Frontend
 
 * React.js
 * Vercel (Deployment)
 
-Why? >>
+#### Why Frontend
 
 * Fast UI rendering
 * Seamless Web3 integration
 * Serverless and scalable hosting
 
->> Backend
+### Backend
 
 * Spring Boot
 * Maven
 
-**Why Spring Boot?**
+#### Why Spring Boot
 
 * Handles complex business logic
 * Enterprise-grade architecture
 * Secure REST APIs
 
-**Why Maven?**
+#### Why Maven
 
 * Dependency management
 * Build automation
 
-
->> Blockchain
+### Blockchain
 
 * Ethereum Smart Contracts
 * Alchemy API
 
-**Why?**
+#### Why Blockchain
 
 * Immutable data storage
 * Decentralized trust
 * No need for self-hosted nodes
 
----
-
->> Storage
+### Storage
 
 * IPFS
 * Pinata
 
-**Why?**
+#### Why Storage
 
 * Decentralized file storage
 * Content-based addressing
 * Reliable pinning service
 
----
-
->> Development Tools
+### Development Tools
 
 * Ganache (Local blockchain)
 * ngrok (Public tunnel)
 
-**Why?**
+#### Why Development Tools
 
 * Faster local testing
 * Easy frontend-backend integration
-
----
 
 ## Detailed Workflow
 
@@ -113,7 +106,7 @@ Why? >>
 * User accesses the web app
 * Inputs data or uploads medical records
 
-###  Backend Processing
+### Backend Processing
 
 * Validates user data
 * Prepares blockchain transactions
@@ -126,7 +119,6 @@ Why? >>
 ### Blockchain Storage
 
 * Smart contract stores:
-
   * Metadata
   * IPFS CID
 
@@ -134,8 +126,6 @@ Why? >>
 
 * Fetch CID from blockchain
 * Retrieve file from IPFS securely
-
----
 
 ## Key Features
 
@@ -145,11 +135,9 @@ Why? >>
 * Secure API-based backend
 * Local blockchain testing environment
 
----
+## Setup Instructions
 
- >> Setup Instructions
-
-🔹 Prerequisites
+### Prerequisites
 
 * Node.js
 * Java (JDK 8+)
@@ -157,20 +145,22 @@ Why? >>
 * Ganache
 * MetaMask Extension
 
-🔹 Clone the Repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/ffrazi/organchain.git
 cd organchain
 ```
-🔹 Backend Setup
+
+### Backend Setup
 
 ```bash
 cd backend
 mvn clean install
 mvn spring-boot:run
 ```
-🔹 Frontend Setup
+
+### Frontend Setup
 
 ```bash
 cd frontend
@@ -178,21 +168,19 @@ npm install
 npm start
 ```
 
-🔹 Smart Contract Deployment
+### Smart Contract Deployment
 
 ```bash
 cd contracts
 # compile & deploy using truffle/hardhat
 ```
 
-🔹 Start Ganache
+### Start Ganache
 
 * Launch Ganache GUI or CLI
 * Copy RPC URL and configure in project
 
----
-
->> Deployment
+## Deployment
 
 | Component  | Platform             |
 | ---------- | -------------------- |
@@ -201,7 +189,7 @@ cd contracts
 | Blockchain | Ethereum via Alchemy |
 | Storage    | IPFS via Pinata      |
 
->> Comparison with Traditional Systems
+## Comparison with Traditional Systems
 
 | Feature      | Traditional System | OrganChain        |
 | ------------ | ------------------ | ----------------- |
@@ -210,26 +198,26 @@ cd contracts
 | Transparency | Limited            | Full              |
 | Security     | Moderate           | High              |
 
->> Limitations
+## Limitations
 
 * Gas fees for blockchain transactions
 * Slower write operations
 * Requires Web3 knowledge
 
->> Future Scope
+## Future Scope
 
 * AI-based organ matching system
 * Real-time dashboards
 * Integration with hospital APIs
 * Multi-chain compatibility
 
->> Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a new branch
 3. Commit your changes
 4. Push and create PR
 
-## ⭐ Acknowledgement
+## Acknowledgement
 
 If you find this project useful, consider giving it a ⭐ on GitHub!
