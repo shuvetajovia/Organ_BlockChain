@@ -5,9 +5,10 @@ import com.transplantchain.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.transplantchain.dto.LoginRequestDTO;
+import jakarta.validation.Valid;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -20,10 +21,10 @@ public class AuthController {
     private PatientRepository patientRepository;
 
     @PostMapping("/login")
-    public ResponseEntity<Map<String, Object>> login(@RequestBody Map<String, String> request) {
-        String abhaId = request.get("abhaId");
-        String password = request.get("password");
-        String role = request.get("role");
+    public ResponseEntity<Map<String, Object>> login(@Valid @RequestBody LoginRequestDTO request) {
+        String abhaId = request.getAbhaId();
+        String password = request.getPassword();
+        String role = request.getRole();
 
         Map<String, Object> response = new HashMap<>();
 
@@ -65,10 +66,10 @@ public class AuthController {
     }
 
     @PostMapping("/verify-otp")
-    public ResponseEntity<Map<String, Object>> verifyOtp(@RequestBody Map<String, String> request) {
-        String abhaId = request.get("abhaId");
-        String otp = request.get("otp");
-
+    public ResponseEntity<Map<String, Object>> verifyOtp(@Valid @RequestBody LoginRequestDTO request) {
+        String abhaId = request.getAbhaId();
+        String otp = request.getOtp();
+        
         Map<String, Object> response = new HashMap<>();
 
         if ("123456".equals(otp)) {

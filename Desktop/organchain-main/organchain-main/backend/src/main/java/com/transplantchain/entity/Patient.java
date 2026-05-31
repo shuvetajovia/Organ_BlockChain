@@ -1,11 +1,17 @@
 package com.transplantchain.entity;
 
 import jakarta.persistence.*;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter(AccessLevel.NONE)
     private Long id;
 
     @Column(unique = true, nullable = false)
@@ -20,12 +26,4 @@ public class Patient {
         this.password = password;
         this.name = name;
     }
-
-    public Long getId() { return id; }
-    public String getAbhaId() { return abhaId; }
-    public void setAbhaId(String abhaId) { this.abhaId = abhaId; }
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-    public String getPassword() { return password; }
-    public void setPassword(String password) { this.password = password; }
 }

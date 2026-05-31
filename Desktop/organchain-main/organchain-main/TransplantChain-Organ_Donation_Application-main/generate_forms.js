@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 
 const FORMS_DIR = path.resolve(__dirname, 'src/forms');
-
+console.log("Generating forms...");
 const forms = [
   { id: 1, title: 'Form 1', subtitle: 'Application for Living Donor (Near-Related)', desc: 'Application for organ transplantation from a near-related living donor under THOA, 1994.' },
   { id: 2, title: 'Form 2', subtitle: 'Consent for Living Spousal Organ Donation', desc: 'Spousal consent declaration for living donor organ transplantation as required by NOTTO.' },
@@ -262,7 +262,8 @@ forms.forEach(form => {
   const buf = makePdf(form);
   const outPath = path.join(FORMS_DIR, `Form_${form.id}.pdf`);
   fs.writeFileSync(outPath, buf);
-  console.log(`Generated: Form_${form.id}.pdf (${buf.length} bytes)`);
+  console.log(` [${form.id}/10] ✔ ${form.title} - ${form.subtitle}`);
+  console.log(` Saved to: ${outPath} (${(buf.length/1024).toFixed(1)} KB)`);
 });
 
-console.log('\nAll 10 NOTTO form PDFs generated successfully!');
+console.log("\nAll 10 NOTTO form PDFs generated successfully!");
